@@ -1,4 +1,4 @@
-#Utility to copy messages from one Kafka topic to another while unwrapping value from JSON body
+# Utility to copy messages from one Kafka topic to another while unwrapping value from JSON body
 
 Reads Kafka messages with a simple JSON message encapsulating another message as value, then writes the unwrapped value into another message in a different mtopic. The value itself can be JSON or another text format. The input message would have the body `{"name":"value"}`, the target has the `value` as body. The attribute name is not relevant, all attribute after the first one areignored. The key of the target message can either be empty or the valueitself. Header values are not passed. For Kafka, SASL-SSL or no authentication are supported. An empty user name will indicate no authentication. 
 
